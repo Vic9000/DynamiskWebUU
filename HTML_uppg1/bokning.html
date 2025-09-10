@@ -1,117 +1,124 @@
 <!DOCTYPE html>
 <html lang="sv">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Café Choco-Latte</title>
     <link rel="stylesheet" href="./styles/style.css">
-</head>
-<body>
+  </head>
+  <body>
     <!-- Wrapper runt hela sidan -->
     <div id="wrapper">
-    <!-- Header med rubriker och "ingressen" för caféet som är med på alla sidor -->
-    <header>
+      <!-- Header med rubriker och "ingressen" för caféet som är med på alla sidor -->
+      <header>
         <h1>Café Choco-Latte</h1>
 
         <h2>Fantastiskt kaffe & läckra bakverk</h2>
 
-        <p>Vi vill vara en kaffeoas där du känner de intensiva dofterna från kaffet när du kliver in genom dörren. Vi är en plats där du för varje kopp kaffe och bakverk ska uppleva en sann njutning och smaksensation.  Vi vill ge dig hög kvalitet utan att tumma på rättvisan gentemot kaffe- och kakoodlarna. </p>
-    </header>
-    <!-- Nav-bar för länkarna till de olika sidorna -->
-    <nav>
+        <p>
+          Vi vill vara en kaffeoas där du känner de intensiva dofterna från
+          kaffet när du kliver in genom dörren. Vi är en plats där du för varje
+          kopp kaffe och bakverk ska uppleva en sann njutning och smaksensation.
+          Vi vill ge dig hög kvalitet utan att tumma på rättvisan gentemot
+          kaffe- och kakoodlarna.
+        </p>
+      </header>
+      <!-- Nav-bar för länkarna till de olika sidorna -->
+      <nav>
         <ul>
-            <li><a href="/index.html">Hem</a></li>
-            <li><a href="/provning.html">Chokladprovning</a>
-                <ul>
-                    <li><a href="/bokning.html">Boka chokladprovning</a></li>
-                </ul>
-            </li>
-            <li><a href="/kakao.html">Om kakaoträdet</a></li>
+          <li><a href="/index.html">Hem</a></li>
+          <li>
+            <a href="/provning.html">Chokladprovning</a>
+            <ul>
+              <li><a href="/bokning.html">Boka chokladprovning</a></li>
+            </ul>
+          </li>
+          <li><a href="/kakao.html">Om kakaoträdet</a></li>
         </ul>
         <hr>
-    </nav>
-    
-    <!-- main för det huvudsakliga innehållet på respektive sida -->
-    <main>
+      </nav>
+
+      <!-- main för det huvudsakliga innehållet på respektive sida -->
+      <main>
         <!-- Endast en sektion på denna sida -->
-         <section id="bokning">
-            <h2>Boka Chokladprovning</h2>
-            <form action="/submit" method="post">
-                <!-- en fieldset för varje del i formuläret -->
-                <fieldset id="datum">
-                    <legend>Välj datum:</legend>
-                    <p>
-                        <input type="radio" name="datum">
-                        <label for="datum">30 april</label> 
-                    </p>
-                    </p>
-                        <input type="radio" name="datum"> 
-                        <label for="datum">2 maj</label> 
-                    </p>
-                    <p>
-                        <input type="radio" name="datum">
-                        <label for="datum">7 maj</label> 
-                    </p>
-                    <p>
-                        <input type="radio" name="datum">
-                        <label for="datum">9 maj</label> 
-                    </p>
-                    <p>
-                        <input type="radio" name="datum">
-                        <label for="datum">14 maj</label> 
-                    </p>
-                    <p>
-                        <input type="radio" name="datum">
-                        <label for="datum">16 maj</label> 
-                    </p>
-                </fieldset>
+        <section id="bokning">
+          <h2>Boka Chokladprovning</h2>
+          <form action="/submit" method="post">
+            <!-- en fieldset för varje del i formuläret -->
+            <fieldset id="datum-alternativ">
+              <legend>Välj datum:</legend>
+              <p>
+                <input type="radio" name="datum1" id="datum1">
+                <label for="datum1">30 april</label>
+              </p>
+              <p>
+                <input type="radio" name="datum2" id="datum2">
+                <label for="datum2">2 maj</label>
+              </p>
+              <p>
+                <input type="radio" name="datum3" id="datum3">
+                <label for="datum3">7 maj</label>
+              </p>
+              <p>
+                <input type="radio" name="datum4" id="datum4">
+                <label for="datum4">9 maj</label>
+              </p>
+              <p>
+                <input type="radio" name="datum5" id="datum5">
+                <label for="datum5">14 maj</label>
+              </p>
+              <p>
+                <input type="radio" name="datum6" id="datum6">
+                <label for="datum6">16 maj</label>
+              </p>
+            </fieldset>
 
-                <!-- en fieldset för varje del i formuläret -->
-                <fieldset id="antal">
-                    <legend>Välj antal personer:</legend>
-                    <select name="antal-personer" id="antal-personer">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                    </select>
-                </fieldset>
+            <!-- en fieldset för varje del i formuläret -->
+            <fieldset id="antal">
+              <legend>Välj antal personer:</legend>
+              <select name="antal-personer" id="antal-personer">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+            </fieldset>
 
-                <!-- en fieldset för varje del i formuläret -->
-                <fieldset id="uppgifter">
-                    <legend>Fyll i dina uppgifter</legend>
-                    <p>
-                        <label for="namn">Namn:</label>
-                        <input type="text" name="namn" id="namn">
-                    </p>
-                    <p>
-                        <label for="email">Email:</label>
-                        <input type="email" name="email" id="email">
-                    </p>
-                    <p>
-                        <label for="nummer">Mobilnummer:</label>
-                        <input type="tel" name="nummer" id="nummer">
-                    </p>
-                    <p>
-                        <label for="meddelande">Meddelande:</label>
-                        <input type="textarea" name="meddelande" id="meddelande">
-                    </p>
-                </fieldset>
-                <input type="submit" action="/submit" value="Boka" >
-            </form>
-            <hr>
-         </section>
-        
-    </main>
-    <footer>&copy; Copyright 2025 | Café Choco-Latte</footer>
-    </div> <!-- end wrapper -->
-</body>
+            <!-- en fieldset för varje del i formuläret -->
+            <fieldset id="uppgifter">
+              <legend>Fyll i dina uppgifter</legend>
+              <p>
+                <label for="namn">Namn:</label>
+                <input type="text" name="namn" id="namn">
+              </p>
+              <p>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">
+              </p>
+              <p>
+                <label for="nummer">Mobilnummer:</label>
+                <input type="tel" name="nummer" id="nummer">
+              </p>
+              <p>
+                <label for="meddelande">Meddelande:</label>
+                <textarea name="meddelande" id="meddelande"></textarea>
+              </p>
+            </fieldset>
+            <input type="submit" value="Boka">
+          </form>
+          <hr>
+        </section>
+      </main>
+      <footer>&copy; Copyright 2025 | Café Choco-Latte</footer>
+    </div>
+    <!-- end wrapper -->
+  </body>
 </html>
