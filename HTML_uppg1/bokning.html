@@ -35,10 +35,83 @@
     <main>
         <!-- Endast en sektion på denna sida -->
          <section id="bokning">
-            <form action=""></form>
+            <h2>Boka Chokladprovning</h2>
+            <form action="/submit" method="post">
+                <!-- en fieldset för varje del i formuläret -->
+                <fieldset id="datum">
+                    <legend>Välj datum:</legend>
+                    <p>
+                        <input type="radio" name="datum">
+                        <label for="datum">30 april</label> 
+                    </p>
+                    </p>
+                        <input type="radio" name="datum"> 
+                        <label for="datum">2 maj</label> 
+                    </p>
+                    <p>
+                        <input type="radio" name="datum">
+                        <label for="datum">7 maj</label> 
+                    </p>
+                    <p>
+                        <input type="radio" name="datum">
+                        <label for="datum">9 maj</label> 
+                    </p>
+                    <p>
+                        <input type="radio" name="datum">
+                        <label for="datum">14 maj</label> 
+                    </p>
+                    <p>
+                        <input type="radio" name="datum">
+                        <label for="datum">16 maj</label> 
+                    </p>
+                </fieldset>
+
+                <!-- en fieldset för varje del i formuläret -->
+                <fieldset id="antal">
+                    <legend>Välj antal personer:</legend>
+                    <select name="antal-personer" id="antal-personer">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </fieldset>
+
+                <!-- en fieldset för varje del i formuläret -->
+                <fieldset id="uppgifter">
+                    <legend>Fyll i dina uppgifter</legend>
+                    <p>
+                        <label for="namn">Namn:</label>
+                        <input type="text" name="namn" id="namn">
+                    </p>
+                    <p>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email">
+                    </p>
+                    <p>
+                        <label for="nummer">Mobilnummer:</label>
+                        <input type="tel" name="nummer" id="nummer">
+                    </p>
+                    <p>
+                        <label for="meddelande">Meddelande:</label>
+                        <input type="textarea" name="meddelande" id="meddelande">
+                    </p>
+                </fieldset>
+                <input type="submit" action="/submit" value="Boka" >
+            </form>
+            <hr>
          </section>
         
     </main>
+    <footer>&copy; Copyright 2025 | Café Choco-Latte</footer>
     </div> <!-- end wrapper -->
 </body>
 </html>
