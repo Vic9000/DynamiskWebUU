@@ -8,9 +8,13 @@ export async function getResult() {
             throw new Error(`Response status: ${response.status}`);
         }
 
-        const json = await response.json().playedGames;
-        console.log(json);
+        const json = await response.json();
+        const playedGames = json.playedGames;
+
+        return playedGames;
     } catch (error) {
         console.error(error.message);
+
+        return [];
     }
 }
