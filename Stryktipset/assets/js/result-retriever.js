@@ -14,7 +14,7 @@ export async function getResult() {
         return playedGames;
     } catch (error) {
         console.error(error.message);
-
+        window.alert('Någonting gick fel, matchdata kunde inte hämtas.')
         return [];
     }
 }

@@ -18,6 +18,7 @@ function makeCheckmark() {
 
 export async function makeRow() {
     const playedGames = await getResult();
+    console.log(playedGames);
     const table = document.getElementById('table');
 
     playedGames.forEach(game => {
@@ -28,9 +29,19 @@ export async function makeRow() {
         row.appendChild(gameIdCell);
 
         const teamCell = document.createElement('td');
-        const homeTeam = game.teams[0].teamName;
-        const awayTeam = game.teams[1].teamName;
-        teamCell.innerHTML = `${homeTeam} VS ${awayTeam}`;
+
+        const homeLink = document.createElement('a');
+        homeLink.href = game.teams[0].homepage;
+        homeLink.textContent = game.teams[0].teamName;
+
+        const awayLink = document.createElement('a');
+        awayLink.href = game.teams[1].homepage;
+        awayLink.textContent = game.teams[1].teamName;
+
+        teamCell.appendChild(homeLink);
+        teamCell.appendChild(document.createTextNode(' VS '));
+        teamCell.appendChild(awayLink);
+
         row.appendChild(teamCell);
 
         const results = ['1', 'X', '2'];
