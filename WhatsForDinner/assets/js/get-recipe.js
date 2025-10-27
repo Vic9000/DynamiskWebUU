@@ -9,11 +9,10 @@ export async function getRandomRecipe() {
 
         const json = await response.json();
         const recipe = json.meals[0];
-        console.log(recipe)
         return recipe;
     } catch (error) {
         console.error(error.message);
-        window.alert('Någonting gick fel, matchdata kunde inte hämtas.')
+        window.alert('Something went wrong, recipe could not be found.')
         return [];
     }
 }

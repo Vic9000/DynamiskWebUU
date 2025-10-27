@@ -1,0 +1,17 @@
+/* Colours:
+Off-white: #F9F5F0
+Beige: #F2EAD3
+Orange: #F4991A
+Dark green: #344F1F
+*/
+
+:root {
+    --main-bg: #F9F5F0;
+    --alt-bg: #F2EAD3;
+    --orange: #F4991A;
+    --dark-green: #344F1F;
+}
+
+body {
+    background-color: var(--main-bg);
+}
