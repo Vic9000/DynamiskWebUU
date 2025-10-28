@@ -12,6 +12,82 @@ Dark green: #344F1F
     --dark-green: #344F1F;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+header {
+    background-color: var(--alt-bg);
+    border: #F4991A 2px solid;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    gap: 4px;
+}
+
+header p {
+    margin: 0 auto;
+}
+
+main {
+    width: 70%;
+}
+
 body {
     background-color: var(--main-bg);
+}
+
+h1 {
+    color: var(--dark-green);
+    font-size: 2rem;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+nav ul li {
+    text-decoration: none;
+    color: white;
+    background-color: var(--orange);
+    padding: 10px;
+    border: var(--dark-green) 2px solid;
+    border-radius: 6px;
+}
+
+nav ul li a {
+    text-decoration: none;
+
+}
+
+.recipe {
+    display: flex;
+}
+
+.recipe ul {
+    width: 30%;
+}
+
+.recipe p {
+    width: 70%;
 }
