@@ -12,12 +12,32 @@ Dark green: #344F1F
     --dark-green: #344F1F;
 }
 
+@font-face {
+    font-family: 'Roboto';
+    src: url('/assets/fonts/Roboto-VariableFont_wdth\,wght.ttf') format('opentype');
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-size: 16px;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
     width: 100vw;
+    min-height: 100vh;
 }
 
 header {
@@ -37,7 +57,25 @@ header p {
 }
 
 main {
-    width: 70%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 16px;
+    padding-bottom: 2.5rem;
+}
+
+footer {
+    width: 100%;
+    background: var(--alt-bg);
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    border-top: var(--dark-green) 2px solid;
+    padding: 8px;
 }
 
 body {
@@ -55,6 +93,7 @@ nav {
     align-items: center;
     justify-content: center;
     width: 100%;
+    margin-bottom: 0;
 }
 
 nav ul {
@@ -72,7 +111,7 @@ nav ul li {
     background-color: var(--orange);
     padding: 10px;
     border: var(--dark-green) 2px solid;
-    border-radius: 6px;
+    border-radius: 6px 6px 0px 0px;
 }
 
 nav ul li a {
@@ -80,14 +119,36 @@ nav ul li a {
 
 }
 
+.recipe-wrapper {
+    width: 750px;
+    background-color: var(--alt-bg);
+    border: var(--orange) 2px solid;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+}
+
 .recipe {
     display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
 }
 
 .recipe ul {
-    width: 30%;
+    max-width: 50%;
 }
 
 .recipe p {
-    width: 70%;
+    max-width: 50%;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }

@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Surprise Recipe</title>
-    <link rel="stylesheet" href="../styles/normalize.css">
-    <link rel="stylesheet" href="../styles/style.css">
-    <script src="../js/index.js" type="module"></script>
+    <link rel="stylesheet" href="/assets/styles/normalize.css">
+    <link rel="stylesheet" href="/assets/styles/style.css">
+    <script src="/assets/js/index.js" type="module"></script>
+    <script src="/assets/js/random.js" type="module"></script>
 </head>
 <body>
     <div class="container">
@@ -17,26 +18,34 @@
 
         <nav>
             <ul class="nav-list">
-                <a href="#">
+                <a href="/index.html">
                     <li>Home</li>
                 </a>
-                <a href="#">
+                <a href="/search.html">
                     <li>Find Recipe</li>
                 </a>
-                <a href="./random.html">
+                <a href="/random.html">
                     <li>Surprise Me</li>
                 </a>
-                <a href="#">
+                <a href="/about.html">
                     <li>About Me</li>
                 </a>
-                <a href="#">
+                <a href="/contact.html">
                     <li>Contact</li>
                 </a>
             </ul>
         </nav>
 
         <main>
-            <h2>Random Recipe</h2>
+            <aside>
+                <h2>Random Recipe</h2>
+                <form action="submit" class="search">
+                    <input type="text" name="searchTerm" placeholder="Search recipe">
+                </form>
+
+                <button name="random-btn" class="random-btn">Random Recipe</button>
+            </aside>
+
             <div class="recipe-wrapper">
                 
             </div>

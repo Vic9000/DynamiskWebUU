@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What's For Dinner?</title>
-    <link rel="stylesheet" href="./assets/styles/normalize.css">
-    <link rel="stylesheet" href="./assets/styles/style.css">
-    <script src="./assets/js/index.js" type="module"></script>
+    <title>Search Recipe</title>
+    <link rel="stylesheet" href="/assets/styles/normalize.css">
+    <link rel="stylesheet" href="/assets/styles/style.css">
+    <script src="/assets/js/index.js" type="module"></script>
 </head>
 <body>
     <div class="container">
@@ -36,19 +36,19 @@
         </nav>
 
         <main>
-            <aside>
-                <h2>Need inspiration for today's dinner?</h2>
-            </aside>
+            
+            <h2>Recipe Search</h2>
+            <span>
+                <form action="submit" class="search">
+                    <input type="text" name="searchTerm" placeholder="Search recipe">
+                </form>
 
-            <p>
-                We all know about the struggles of the everyday. That is why I made this website to help you quickly find a recipe you're craving or even find a spark of inspiration on what to make for dinner. 
-                <br> <br>
-                Click <a href="/search.html">here</a> to search for a recipe you'd like.
-                <br> <br>
-                Or click <a href="/random.html">here</a> to get surprised with a random recipe.
-                <br> <br>
-                Whichever you choose, I hope you'll have a lovely dinnertime.
-            </p>
+                <button name="random-btn" class="random-btn">Random Recipe</button>
+            </span>
+
+            <div class="recipe-wrapper">
+                
+            </div>
         </main>
 
         <footer>
