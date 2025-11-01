@@ -27,7 +27,8 @@ export async function searchRecipe(searchTerm) {
         }
 
         const json = await response.json();
-        const recipe = json.meals[0];
+        console.log(json);
+        const recipe = json.meals; // Skickar alla sökträffar
         return recipe;
     } catch (error) {
         console.error(error.message);

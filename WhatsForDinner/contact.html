@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Recipe</title>
+    <title>Contact Me</title>
     <link rel="stylesheet" href="/assets/styles/normalize.css">
     <link rel="stylesheet" href="/assets/styles/style.css">
     <script src="/assets/js/index.js" type="module"></script>
@@ -16,39 +16,36 @@
         </header>
 
         <nav>
-            <ul class="nav-list">
-                <a href="/index.html">
-                    <li>Home</li>
-                </a>
-                <a href="/search.html">
-                    <li>Find Recipe</li>
-                </a>
-                <a href="/random.html">
-                    <li>Surprise Me</li>
-                </a>
-                <a href="/about.html">
-                    <li>About Me</li>
-                </a>
-                <a href="/contact.html">
-                    <li>Contact</li>
-                </a>
-            </ul>
+            <a href="/index.html">
+                <p class="nav-link">Home</p>
+            </a>
+            <a href="/search.html">
+                <p class="nav-link">Find Recipe</p>
+            </a>
+            <a href="/random.html">
+                <p class="nav-link">Random Recipe</p>
+            </a>
+            <a href="/about.html">
+                <p class="nav-link">About Me</p>
+            </a>
+            <a href="/contact.html">
+                <p class="nav-link">Contact</p>
+            </a>
         </nav>
 
         <main>
-            
-            <h2>Recipe Search</h2>
-            <span>
-                <form action="submit" class="search">
-                    <input type="text" name="searchTerm" placeholder="Search recipe">
+            <section class="content">
+                <h2>Contact me</h2>
+                <form action="submit" class="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email">
+                    <label for="message">Message:</label>
+                    <textarea name="message" id="message" placeholder="Your message goes here..."></textarea>
+                    <input type="submit" value="Submit">
                 </form>
-
-                <button name="random-btn" class="random-btn">Random Recipe</button>
-            </span>
-
-            <div class="recipe-wrapper">
-                
-            </div>
+            </section>
         </main>
 
         <footer>

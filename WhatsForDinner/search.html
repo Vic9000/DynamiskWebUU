@@ -16,43 +16,45 @@
         </header>
 
         <nav>
-            <ul class="nav-list">
-                <a href="/index.html">
-                    <li>Home</li>
-                </a>
-                <a href="/search.html">
-                    <li>Find Recipe</li>
-                </a>
-                <a href="/random.html">
-                    <li>Surprise Me</li>
-                </a>
-                <a href="/about.html">
-                    <li>About Me</li>
-                </a>
-                <a href="/contact.html">
-                    <li>Contact</li>
-                </a>
-            </ul>
+            <a href="/index.html">
+                <p class="nav-link">Home</p>
+            </a>
+            <a href="/search.html">
+                <p class="nav-link">Find Recipe</p>
+            </a>
+            <a href="/random.html">
+                <p class="nav-link">Random Recipe</p>
+            </a>
+            <a href="/about.html">
+                <p class="nav-link">About Me</p>
+            </a>
+            <a href="/contact.html">
+                <p class="nav-link">Contact</p>
+            </a>
         </nav>
 
-        <main>
-            
-            
-            <aside>
-                <h2>Recipe Search</h2>
-                <form action="submit" class="search">
-                    <input type="text" name="searchTerm" placeholder="Search recipe">
-                </form>
+        <main id="recipe">
+            <section class="recipe-section">
+                <div class="wrapper-title">
+                    <form action="submit" class="search">
+                        <label for="searchTerm">Search recipe</label>
+                        <input type="text" name="searchTerm" id="searchTerm" placeholder="Search recipe">
+                    </form>
 
-                <button name="random-btn" class="random-btn">Random Recipe</button>
-            </aside>
+                    <h2>Find recipe</h2>
 
-            <div class="recipe-wrapper">
-                <h2>No recipe to view</h2>
-                <p>
-                    Please search for a recipe to the left to view it. If you instead want a random recipe, please click <a href="/random.html">here</a>.
-                </p>
-            </div>
+                    <button name="random-btn" class="random-btn">Random Recipe</button>
+                </div>
+                
+                <div class="recipe-wrapper">
+                    <div class="recipe-box">
+                        <h2>No recipe to view</h2>
+                        <p>
+                            Please search for a recipe to view it. If you instead want a random recipe, please click <a href="/random.html">here</a>.
+                        </p>
+                    </div>
+                </div>
+            </section>
         </main>
 
         <footer>

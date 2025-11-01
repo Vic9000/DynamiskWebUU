@@ -36,15 +36,26 @@ async function makeIngredientList(recipe) {
     return ingredientList;
 }
 
+// Funktion för att lägga till radbrytningar och öka instruktionernas läsbarhet
+function addLineBreaks(text) {
+    const modifiedText = text.replace(/\.\s*/g, '$&<br>');
+    return modifiedText;
+}
+
 // Funktion för att generera recept-innehållet
 async function makeRecipe(recipeContent) {
     const recipeDiv = document.querySelector(".recipe-wrapper");
+
+    // Gör en div per recept
+    const recipeBox = document.createElement('div');
+    recipeBox.className = 'recipe-box';
 
     // Lägger till rättens namn som h3
     const recipeTitle = document.createElement('h3');
     recipeTitle.className = 'recipe-title';
     recipeTitle.textContent = recipeContent.strMeal;
-    recipeDiv.appendChild(recipeTitle);
+
+    recipeBox.appendChild(recipeTitle);
 
     // Skapar en div för ingredienser och instruktioner
     const recipe = document.createElement('div');  
@@ -52,11 +63,22 @@ async function makeRecipe(recipeContent) {
     recipe.appendChild(await makeIngredientList(recipeContent));
 
     const instructions = document.createElement('p');
-    instructions.textContent = recipeContent.strInstructions;
+    instructions.innerHTML = addLineBreaks(recipeContent.strInstructions);
     recipe.appendChild(instructions);
-    recipeDiv.appendChild(recipe);
-
-
+    
+    // Lägger till receptkällan
+    const source = document.createElement('p');
+    const sourceUrl = document.createElement('a');
+    sourceUrl.href = recipeContent.strSource;
+    sourceUrl.textContent = recipeContent.strSource;
+    source.innerHTML = `Source: <br>`;
+    source.appendChild(sourceUrl);
+    
+    
+    // Lägger till diven i HTML-diven
+    recipeBox.appendChild(recipe);
+    recipeBox.appendChild(source);
+    recipeDiv.appendChild(recipeBox);
 }
 
 export async function makeRandomRecipe() {
@@ -64,8 +86,12 @@ export async function makeRandomRecipe() {
     await makeRecipe(recipeContent);
 }
 
+// Funktion för att kunna visa flera sökträffar samtidigt
 export async function makeSearchRecipe(searchTerm) {
     const recipeContent = await searchRecipe(searchTerm);
-    await makeRecipe(recipeContent);
+    console.log(recipeContent);
+    for (let i=0; i < recipeContent.length; i++) {
+        await makeRecipe(recipeContent[i]);
+    }
 }
 
